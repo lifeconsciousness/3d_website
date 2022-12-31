@@ -1,12 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
 body {
   margin: 0;
   padding: 0;
   background: rgb(19, 19, 20);
   overflow-x: hidden;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+:root {
+  --bg-main: #265a84;
+  --light-main: #eeecec;
 }
 
 p, h1, h2, h3 {
   margin: 0;
+}
+
+button, input {
+  font-family: inherit;
 }
 
 #background {
@@ -27,33 +38,101 @@ main {
 }
 
 .generator-container {
-  width: 26vw;
-  min-width: 300px;
-  height: 60vh;
+  width: 50vmin;
+  min-width: 200px;
   position: relative;
-  background-color: rgb(226, 226, 226);
+  background-color: var(--bg-main);
   z-index: 100;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 0.5em 2em;
+  padding: 0em 2.3em;
+  border-radius: 10px;
 }
 .generator-container h2 {
   text-align: center;
+  margin: 0.7em 0;
+  color: white;
+  font-weight: 800;
 }
 
 .password-container {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: bisque;
-  padding: 0.5em;
+  align-items: center;
+  background-color: var(--light-main);
+  padding: 0.6em 1em;
+  border-radius: 10px;
+}
+.password-container #password {
+  font-size: 1.13em;
+  width: 88%;
+  word-wrap: break-word;
+}
+.password-container .copy-icon {
+  padding: 0.3em;
+  width: 30px;
+  transition: 0.2s;
+  transform: translateX(7px);
+}
+.password-container .copy-icon:hover {
+  background-color: rgba(0, 0, 0, 0.088);
+  border-radius: 10px;
+}
+.password-container .copy-icon:active {
+  background-color: rgba(0, 0, 0, 0.237);
 }
 
 .password-settings {
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 1em 0;
+  margin: 0.5em 0;
+  border-radius: 10px;
+  background-color: var(--light-main);
+  padding: 1em;
+}
+
+.password-strength {
+  width: 100%;
+  padding: 0.7em 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--light-main);
+  border-radius: 10px;
+}
+
+.strength-value {
+  display: flex;
+  align-items: center;
+}
+
+.strength-value-bar {
+  width: 10px;
+  height: 30px;
+  border: 1px solid black;
+  margin-left: 0.2em;
+}
+
+.generate-btn {
+  width: 12em;
+  height: 3em;
+  margin: 1.2em 0;
+  outline: none;
+  border-radius: 0;
+  border: none;
+  font-size: 1em;
+  border-radius: 10px;
+  transition: 0.1s;
+}
+
+.generate-btn:hover {
+  background-color: #d4dde2;
+}
+
+.generate-btn:active {
+  background-color: #7ea8ca;
 }/*# sourceMappingURL=style.css.map */

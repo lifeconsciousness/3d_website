@@ -13,35 +13,38 @@
         <div class="generator-container">
             <h2>Password generator</h2>
             <div class="password-container">
-                <p id="password">Password placeholder</p>
-                <img src="" alt="copy icon" class="copy-icon">
+                <p id="password">PasswordPasswordPasswordPassword</p>
+                <img src="./img/1621635.png" alt="copy icon" class="copy-icon">
             </div>
             <div class="password-settings">
     
-                <label for="passwordLengthName">Password length</label>
-                <input type="range" name="passwordLengthName" id="password-length-slider">
+                <div style="display: flex; justify-content: space-between;">
+                    <label for="passwordLengthName">Character Length</label>
+                    <p class="password-length">8</p>
+                </div>
+                <input type="range" name="passwordLengthName" id="password-length-slider" value="8" min="8" max="32">
     
                 <div class="include-checkbox">
-                    <label for="uppercaseName">Include uppercase letter</label>
                     <input type="checkbox" name="uppercaseName" id="uppercase-checkbox">
+                    <label for="uppercaseName">Include uppercase letters</label>
                 </div>
     
                 <div class="include-checkbox">
-                    <label for="lowercaseName">Include uppercase letter</label>
                     <input type="checkbox" name="lowercaseName" id="lowercase-checkbox">
+                    <label for="lowercaseName">Include lowercase letters</label>
                 </div>
     
                 <div class="include-checkbox">
-                    <label for="numbersName">Include uppercase letter</label>
                     <input type="checkbox" name="numbersName" id="numbers-checkbox">
+                    <label for="numbersName">Include numbers</label>
                 </div>
     
                 <div class="include-checkbox">
-                    <label for="symbolsName">Include uppercase letter</label>
                     <input type="checkbox" name="symbolsName" id="symbols-checkbox">
+                    <label for="symbolsName">Include symbols</label>
                 </div>
     
-    
+
                 
             </div>
             
@@ -49,7 +52,7 @@
                 <p class="strength">Strength</p>
     
                 <div class="strength-value">
-                    <p class="strength-value-text"></p>
+                    <p class="strength-value-text">Medium</p>
     
                     <div class="strength-value-bar"></div>
                     <div class="strength-value-bar"></div>
@@ -58,7 +61,7 @@
                 </div>
             </div>
             
-            <button>Generate</button>
+            <button class="generate-btn">Generate</button>
         </div>
     </main>
 
