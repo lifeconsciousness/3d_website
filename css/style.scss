@@ -5,10 +5,56 @@ body{
     overflow-x: hidden;
 }
 
+p,h1,h2,h3{
+    margin: 0;
+}
+
 #background{
     position: fixed;
     height: 100vh;
     width: 100%;
     left: 0;
     top: 0;
+    z-index: 2;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.generator-container{
+    width: 26vw;
+    min-width: 300px;
+    height: 60vh;
+    position: relative;
+    background-color: rgb(226, 226, 226);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: .5em 2em;
+
+    h2{
+        text-align: center;
+    }
+}
+
+.password-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: bisque;
+    padding: .5em;
+}
+
+.password-settings{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0;
 }

@@ -1,7 +1,9 @@
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
-const renderer = new THREE.WebGLRenderer();
+const renderer = new THREE.WebGLRenderer({
+    canvas: document.querySelector(`#background`)
+});
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
@@ -25,6 +27,9 @@ function animate() {
 
     hedron.rotation.x += 0.0007;
     hedron.rotation.y += 0.0007;
+
+    // hedron.rotation.x += 0.01; //this speed will make you dizzy
+    // hedron.rotation.y += 0.01;
 
     renderer.render( scene, camera );
 };
