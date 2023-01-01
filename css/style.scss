@@ -7,6 +7,7 @@ body{
     padding: 0;
     background: rgb(19, 19, 20);
     overflow-x: hidden;
+    overflow-y: hidden;
     // font-family: 'Roboto Mono', monospace;
     // font-family: 'Rubik', sans-serif;
     font-family: 'Nunito Sans', sans-serif;
@@ -190,7 +191,7 @@ main{
 }
 
 .popup-animation{
-    animation: popupBottom 1.4s forwards;
+    animation: popupBottom 1.4s;
 }
 
 @keyframes popupBottom{
@@ -208,5 +209,16 @@ main{
     100%{
         opacity: 0;
     }
-    
+}
+
+
+
+.weak{
+    background-color: rgb(160, 72, 67);
+}
+.medium{
+    background-color: rgb(218, 206, 38);
+}
+.strong{
+    background-color: rgb(67, 160, 67);
 }
