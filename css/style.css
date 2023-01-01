@@ -37,6 +37,11 @@ main {
   width: 100vw;
 }
 
+@media (max-width: 350px) {
+  .generator-container {
+    width: 100vw !important;
+  }
+}
 .generator-container {
   width: 50vmin;
   min-width: 200px;
@@ -147,6 +152,61 @@ main {
 
 @media (max-width: 670px) {
   .generate-btn {
-    width: 100%;
+    width: 90%;
+  }
+}
+.popup-message {
+  position: absolute;
+  width: 12em;
+  height: 2.4em;
+  background-color: var(--light-main);
+  border-radius: 20px;
+  left: 0;
+  right: 0;
+  bottom: 0em;
+  margin: 0 auto;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(40px);
+}
+
+.popup-animation {
+  -webkit-animation: popupBottom 1.4s forwards;
+          animation: popupBottom 1.4s forwards;
+}
+
+@-webkit-keyframes popupBottom {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+    transform: translateY(-40px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes popupBottom {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+    transform: translateY(-40px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 0;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -29,6 +29,8 @@ generateButton.onclick = function generatePassword(){
     result = ``
     includesArray = []
 
+    popupMessage.classList.remove(`popup-animation`)
+
     //fill array with numbers that represent different includes
     getIncludesNumbers()
     //check if it's empty
@@ -93,13 +95,18 @@ function generateDifferentIncludes(includesNumbers){
 }
 
 
-const copyIcon = document.querySelector(`.copy-icon`)
 
+const copyIcon = document.querySelector(`.copy-icon`)
 copyIcon.addEventListener("click", function(){copyToClipboard(passwordDisplay.innerHTML)})
+const popupMessage = document.querySelector(`.popup-message`)
 
 async function copyToClipboard(text){
+    popupMessage.classList.add(`popup-animation`)
     try{
         await navigator.clipboard.writeText(text)
     } catch(err){ console.error(err) }
 }
+
+
+
 

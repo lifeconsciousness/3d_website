@@ -51,11 +51,15 @@ main{
     height: 100vh;
     width: 100vw;
 }
+@media(max-width: 350px){
+    .generator-container{
+        width: 100vw !important;
+    }
+}
 
 .generator-container{
     width: 50vmin;
     min-width: 200px;
-    //height: 60vh;
     position: relative;
     background-color: var(--bg-main);
     z-index: 100;
@@ -104,11 +108,9 @@ main{
     }
     .copy-icon:hover{
         background-color: rgba(0, 0, 0, 0.088);
-        // background-color: #accbe18e;
         border-radius: 10px;
     }
     .copy-icon:active{
-        // background-color: #84a6beb7;
         background-color: rgba(0, 0, 0, 0.237);
     }
 }
@@ -166,6 +168,45 @@ main{
 }
 @media(max-width: 670px){
     .generate-btn{
-        width: 100%;
+       width: 90%;
     }
+}
+
+.popup-message{
+    position: absolute;
+    width: 12em;
+    height: 2.4em;
+    background-color: var(--light-main);
+    border-radius: 20px;
+    left: 0;
+    right: 0;
+    bottom: 0em;
+    margin: 0 auto;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(40px);
+}
+
+.popup-animation{
+    animation: popupBottom 1.4s forwards;
+}
+
+@keyframes popupBottom{
+    0%{
+        opacity: 0;
+    }
+    35%{
+        opacity: 1;
+        transform: translateY(-40px);
+    }
+    60%{
+        opacity: 1;
+        transform: translateY(-40px);
+    }
+    100%{
+        opacity: 0;
+    }
+    
 }
