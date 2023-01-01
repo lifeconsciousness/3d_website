@@ -69,12 +69,14 @@ main {
 .password-container #password {
   font-size: 1.13em;
   width: 88%;
+  min-height: 20px;
   word-wrap: break-word;
 }
 .password-container .copy-icon {
   padding: 0.3em;
   width: 12%;
   min-width: 27px;
+  max-width: 30px;
   transition: 0.2s;
   display: flex;
 }

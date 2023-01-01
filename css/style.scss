@@ -86,12 +86,14 @@ main{
     #password{
         font-size: 1.13em;
         width: 88%;
+        min-height: 20px;
         word-wrap: break-word;
     }
     .copy-icon{
         padding: .3em;
         width: 12%;
         min-width: 27px;
+        max-width: 30px;
         transition: .2s;
         display: flex;
     }

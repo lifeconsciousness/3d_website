@@ -28,11 +28,13 @@ generateButton.onclick = function generatePassword(){
     result = ``
     includesArray = []
 
-    //check for all empty checkboxes and get representative numbers of checked ones 
-    if(checkEmptyCheckboxes()){
+    //fill array with numbers that represent different includes
+    getIncludesNumbers()
+    //check if it's empty
+    if(includesArray.length == 0){
+        passwordDisplay.innerHTML = `Include something`
         return
     }
-    getIncludesNumbers()
 
     //get string of random calls to different arrays of characters
     let differentIncludes = generateDifferentIncludes(includesArray)
@@ -89,16 +91,10 @@ function generateDifferentIncludes(includesNumbers){
     return includesString
 }
 
-//checks whether all checkboxes are empty and retures true/false value
-function checkEmptyCheckboxes(){
-    let counter = 0;
-    checkboxes.forEach((checkbox)=>{
-        if (!checkbox.checked){
-            counter++
-        }
-    })
-    if(counter == checkboxes.length){
-        passwordDisplay.innerHTML = "empty"
-        return true
-    }
+
+const copyIcon = document.querySelector(`.copy-icon`)
+
+copyIcon.onclick = function(){
+    
 }
+
