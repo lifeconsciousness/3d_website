@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password generator</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/password-generator.js"></script>
 </head>
 <body>
     <canvas id="background"></canvas>
@@ -23,24 +24,24 @@
                     <p class="password-length">8</p>
                 </div>
                 <input type="range" name="passwordLengthName" id="password-length-slider" value="8" min="8" max="32">
-    
+                
                 <div class="include-checkbox">
-                    <input type="checkbox" name="uppercaseName" id="uppercase-checkbox">
+                    <input type="checkbox" name="lowercaseName" class="checkbox" id="lowercase-checkbox" checked>
+                    <label for="lowercaseName">Include lowercase letters</label>
+                </div>
+
+                <div class="include-checkbox">
+                    <input type="checkbox" name="uppercaseName" class="checkbox" id="uppercase-checkbox">
                     <label for="uppercaseName">Include uppercase letters</label>
                 </div>
     
                 <div class="include-checkbox">
-                    <input type="checkbox" name="lowercaseName" id="lowercase-checkbox">
-                    <label for="lowercaseName">Include lowercase letters</label>
-                </div>
-    
-                <div class="include-checkbox">
-                    <input type="checkbox" name="numbersName" id="numbers-checkbox">
+                    <input type="checkbox" name="numbersName" class="checkbox" id="numbers-checkbox">
                     <label for="numbersName">Include numbers</label>
                 </div>
     
                 <div class="include-checkbox">
-                    <input type="checkbox" name="symbolsName" id="symbols-checkbox">
+                    <input type="checkbox" name="symbolsName" class="checkbox" id="symbols-checkbox">
                     <label for="symbolsName">Include symbols</label>
                 </div>
     
