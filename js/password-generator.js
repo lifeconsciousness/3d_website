@@ -15,7 +15,8 @@ const numbersArray = ["0","1","2","3","4","5","6","7","8","9"]
 const symbolsArray = ["!","#","`","$","%","^",":",";","&","*","(",")","-",".","?","[","]","_","~","*","="]
 
 const generateButton = document.querySelector(`.generate-btn`)
-let result = ``
+
+let result = `` 
 let includesArray = []
 
 //updates password length display
@@ -94,7 +95,11 @@ function generateDifferentIncludes(includesNumbers){
 
 const copyIcon = document.querySelector(`.copy-icon`)
 
-copyIcon.onclick = function(){
-    
+copyIcon.addEventListener("click", function(){copyToClipboard(passwordDisplay.innerHTML)})
+
+async function copyToClipboard(text){
+    try{
+        await navigator.clipboard.writeText(text)
+    } catch(err){ console.error(err) }
 }
 
