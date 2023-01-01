@@ -73,9 +73,15 @@ main {
 }
 .password-container .copy-icon {
   padding: 0.3em;
-  width: 30px;
+  width: 12%;
+  min-width: 27px;
   transition: 0.2s;
-  transform: translateX(7px);
+  display: flex;
+}
+@media (min-width: 530px) {
+  .password-container .copy-icon {
+    transform: translateX(7px);
+  }
 }
 .password-container .copy-icon:hover {
   background-color: rgba(0, 0, 0, 0.088);
@@ -135,4 +141,10 @@ main {
 
 .generate-btn:active {
   background-color: #7ea8ca;
+}
+
+@media (max-width: 670px) {
+  .generate-btn {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
