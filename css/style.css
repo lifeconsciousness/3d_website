@@ -9,8 +9,9 @@ body {
 }
 
 :root {
-  --bg-main: #265a84;
+  --bg-main: rgba(38, 89, 130, 0.624);
   --light-main: #eeecec;
+  --accent-main: rgba(38, 89, 130, 0.985);
 }
 
 p, h1, h2, h3 {
@@ -41,6 +42,11 @@ main {
 @media (max-width: 350px) {
   .generator-container {
     width: 100vw !important;
+    height: 100% !important;
+    justify-content: center !important;
+  }
+  .copy-icon {
+    margin-left: 0.2em;
   }
 }
 .generator-container {
@@ -129,6 +135,7 @@ main {
   height: 30px;
   border: 1px solid black;
   margin-left: 0.2em;
+  border-radius: 3px;
 }
 
 .generate-btn {
@@ -153,7 +160,7 @@ main {
 
 @media (max-width: 670px) {
   .generate-btn {
-    width: 90%;
+    width: 65%;
   }
 }
 .popup-message {
@@ -216,9 +223,22 @@ main {
 }
 
 .medium {
-  background-color: rgb(218, 206, 38);
+  background-color: rgb(218, 173, 38);
 }
 
 .strong {
   background-color: rgb(67, 160, 67);
+}
+
+.strength-value-text {
+  margin-right: 0.4em;
+}
+
+#password-length-slider {
+  margin-bottom: 1em;
+  accent-color: var(--accent-main);
+}
+
+.checkbox {
+  accent-color: var(--accent-main);
 }/*# sourceMappingURL=style.css.map */
